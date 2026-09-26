@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nano-diffusion-study"
+version = "0.1.0"
+description = "A small, readable flow-matching inference engine for source-code study"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.4"]
+
+[project.optional-dependencies]
+wan = ["diffusers>=0.35,<0.40", "transformers>=4.51,<5", "accelerate>=1", "safetensors", "sentencepiece", "ftfy"]
+video = ["imageio[ffmpeg]"]
+
+[project.urls]
+Repository = "https://github.com/Micdiane/nano-diffusion"
+
+[project.scripts]
+nano-diffusion = "nanodiffusion.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["nanodiffusion*"]
