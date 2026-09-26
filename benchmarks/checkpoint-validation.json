@@ -1,0 +1,80 @@
+{
+  "model_revision": "83d7a190bfd1fd070570a793d2dab5c7a3231b9d",
+  "torch": "2.13.0+cu130",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "prompt": "A small red panda drinking tea in a bamboo forest, watercolor painting",
+  "forward": [
+    {
+      "timestep": 999,
+      "branch": "positive",
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "relative_l2": 0.0,
+      "cosine": 1.0,
+      "finite": true
+    },
+    {
+      "timestep": 999,
+      "branch": "negative",
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "relative_l2": 0.0,
+      "cosine": 1.0000001192092896,
+      "finite": true
+    },
+    {
+      "timestep": 500,
+      "branch": "positive",
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "relative_l2": 0.0,
+      "cosine": 1.0,
+      "finite": true
+    },
+    {
+      "timestep": 500,
+      "branch": "negative",
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "relative_l2": 0.0,
+      "cosine": 1.0,
+      "finite": true
+    },
+    {
+      "timestep": 136,
+      "branch": "positive",
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "relative_l2": 0.0,
+      "cosine": 0.9999999403953552,
+      "finite": true
+    },
+    {
+      "timestep": 136,
+      "branch": "negative",
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "relative_l2": 0.0,
+      "cosine": 1.0,
+      "finite": true
+    }
+  ],
+  "policy": "bf16 DiT, fp32 CFG/latents/VAE; Gemma2 eager bf16, no prompt enrichment",
+  "final_latents": {
+    "max_abs": 0.27501988410949707,
+    "rmse": 0.02883312664926052,
+    "relative_l2": 0.024947742000222206,
+    "cosine": 0.9996898174285889,
+    "finite": true
+  },
+  "final_images": {
+    "max_abs": 0.48908936977386475,
+    "rmse": 0.014239339157938957,
+    "relative_l2": 0.02214699797332287,
+    "cosine": 0.9998012781143188,
+    "finite": true
+  },
+  "image_psnr_db": 36.930203437805176,
+  "forward_bit_exact": true,
+  "trajectory_note": "The official pipeline batches CFG, so its GEMM rounding may differ from sequential CFG."
+}

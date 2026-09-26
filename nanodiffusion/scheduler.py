@@ -4,7 +4,7 @@ from nanodiffusion.request import Request
 
 
 class RequestScheduler:
-    """FIFO admission: one active video keeps the first implementation small."""
+    """FIFO admission: one active image request keeps the first implementation small."""
 
     def __init__(self):
         self.waiting: deque[Request] = deque()

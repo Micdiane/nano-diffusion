@@ -1,8 +1,11 @@
 from dataclasses import dataclass
+from typing import TYPE_CHECKING
 import torch
 
 from nanodiffusion.config import SamplingParams
-from nanodiffusion.sampler import FlowEuler
+if TYPE_CHECKING:
+    from diffusers import DPMSolverMultistepScheduler
+    from nanodiffusion.models.sana import Conditioning
 
 
 @dataclass
@@ -13,9 +16,10 @@ class Request:
     params: SamplingParams
     step_index: int = 0
     latents: torch.Tensor | None = None
-    positive: torch.Tensor | None = None
-    negative: torch.Tensor | None = None
-    sampler: FlowEuler | None = None
+    positive: 'Conditioning | None' = None
+    negative: 'Conditioning | None' = None
+    sampler: 'DPMSolverMultistepScheduler | None' = None
+    host_timesteps: list[float] | None = None
 
 
 @dataclass
@@ -24,7 +28,7 @@ class GenerationOutput:
     prompt: str
     seed: int
     latents: torch.Tensor
-    frames: torch.Tensor
+    images: torch.Tensor
     num_model_calls: int
 
 

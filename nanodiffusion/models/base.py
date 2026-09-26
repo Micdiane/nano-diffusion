@@ -1,32 +1,23 @@
-from typing import Protocol
+from typing import Protocol, TYPE_CHECKING
 import torch
 
 from nanodiffusion.config import SamplingParams
+if TYPE_CHECKING:
+    from diffusers import DPMSolverMultistepScheduler
+    from nanodiffusion.models.sana import Conditioning
 
 
 class ModelAdapter(Protocol):
-    """Component boundary; the engine owns noise, CFG and numerical integration."""
-
+    """The engine owns noise, CFG and per-request sampler state."""
     device: torch.device
     dtype: torch.dtype
-    default_shift: float
-    num_train_timesteps: int
 
-    def latent_shape(self, params: SamplingParams) -> tuple[int, int, int, int, int]: ...
-
-    def encode(self, prompt: str) -> torch.Tensor: ...
-
-    def begin_denoising(self) -> None: ...
-
+    def latent_shape(self, params: SamplingParams) -> tuple[int, int, int, int]: ...
+    def make_sampler(self, params: SamplingParams) -> 'DPMSolverMultistepScheduler': ...
+    def encode(self, prompt: str) -> 'Conditioning': ...
     def predict_velocity(self, latents: torch.Tensor, timestep: torch.Tensor,
-                         conditioning: torch.Tensor) -> torch.Tensor:
-        """Runner supplies device-local latents/conditioning in compute dtype, FP32 time."""
-        ...
-
-    def end_denoising(self) -> None: ...
-
+                         conditioning: 'Conditioning') -> torch.Tensor: ...
     def decode(self, latents: torch.Tensor) -> torch.Tensor:
-        """Return CPU float32 frames [B,F,H,W,3] in [0,1]."""
+        """Return CPU float32 images [B,H,W,3] in [0,1]."""
         ...
-
     def close(self) -> None: ...

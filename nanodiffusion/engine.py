@@ -25,10 +25,6 @@ class Diffusion:
     def _abort_active(self) -> None:
         request = self.scheduler.active
         if request is not None:
-            try:
-                self.runner.model.end_denoising()
-            except Exception:
-                pass  # Preserve the original model/callback failure.
             self.runner.release(request)
             self.scheduler.finish()
 

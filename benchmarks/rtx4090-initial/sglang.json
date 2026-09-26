@@ -1,0 +1,232 @@
+{
+  "engine": "sglang",
+  "timestamp_utc": "2026-09-26T07:53:58.806494+00:00",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_capability": [
+    8,
+    9
+  ],
+  "driver": "580.142",
+  "python": "3.12.13",
+  "versions": {
+    "torch": "2.13.0",
+    "triton": "3.7.1",
+    "diffusers": "0.37.0",
+    "transformers": "5.12.1",
+    "safetensors": "0.8.0",
+    "numpy": "2.3.5"
+  },
+  "model_id": "Efficient-Large-Model/Sana_600M_512px_diffusers",
+  "model_revision": "83d7a190bfd1fd070570a793d2dab5c7a3231b9d",
+  "sglang_revision": "0e2aac500bbd7010503bff67bd221bfbd7f04389",
+  "sampling": {
+    "height": 512,
+    "width": 512,
+    "num_steps": 20,
+    "guidance_scale": 4.5,
+    "seed": 42,
+    "negative_prompt": ""
+  },
+  "threads": 8,
+  "batch_size": 1,
+  "policy": {
+    "dit": "bf16 eager native model",
+    "text_encoder": "shared HF Gemma2 bf16 eager (softcapping enabled)",
+    "vae": "shared HF DC-AE fp32",
+    "latents_noise_cfg": "fp32",
+    "noise_generator": "cpu",
+    "prompt_enrichment": false,
+    "text_length": 300,
+    "padding": "max_length/right",
+    "cfg_execution": "sequential positive/negative",
+    "tf32": false,
+    "cudnn_sdpa": false,
+    "cpu_offload": false,
+    "cache": false,
+    "torch_compile": false,
+    "cuda_graphs": false,
+    "timing": "wall clock, synchronized before/after; full in-process pipeline through CPU float images and latents; excludes load, warmup and file writes",
+    "denoise_timing": "CUDA events around the denoising loop; includes GPU idle gaps between launches",
+    "memory": "PyTorch peak allocated/reserved in this process, including resident model weights",
+    "sglang_scope": "native SanaPipeline via loaded_modules; shared HF text encoder/VAE and FP32 CFG/latent config; no upstream source patches"
+  },
+  "summary": {
+    "requests": 12,
+    "total_seconds": 24.616416182368994,
+    "images_per_second": 0.4874795709943658,
+    "mean_seconds": 2.0513680151974163,
+    "median_seconds": 2.046871546539478,
+    "stdev_seconds": 0.02340827859008661,
+    "p95_seconds": 2.1011759811080992,
+    "mean_denoise_gpu_ms": 1915.9718017578125,
+    "peak_allocated_gib": 7.970027446746826,
+    "peak_reserved_gib": 8.625
+  },
+  "runs": [
+    {
+      "index": -3,
+      "warmup": true,
+      "prompt": "A small red panda drinking tea in a bamboo forest, watercolor painting",
+      "seed": 42,
+      "seconds": 5.31421632389538,
+      "denoise_gpu_ms": 2585.539306640625,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": -2,
+      "warmup": true,
+      "prompt": "A small wooden boat on a calm alpine lake at sunrise, realistic landscape photography",
+      "seed": 43,
+      "seconds": 2.0753149120137095,
+      "denoise_gpu_ms": 1940.5020751953125,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": -1,
+      "warmup": true,
+      "prompt": "A ceramic teapot and two cups on a wooden table beside a window, soft morning light",
+      "seed": 44,
+      "seconds": 2.0111433160491288,
+      "denoise_gpu_ms": 1877.5531005859375,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 0,
+      "warmup": false,
+      "prompt": "A small red panda drinking tea in a bamboo forest, watercolor painting",
+      "seed": 42,
+      "seconds": 2.0763263611588627,
+      "denoise_gpu_ms": 1932.4200439453125,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 1,
+      "warmup": false,
+      "prompt": "A small wooden boat on a calm alpine lake at sunrise, realistic landscape photography",
+      "seed": 43,
+      "seconds": 2.1011759811080992,
+      "denoise_gpu_ms": 1966.389892578125,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 2,
+      "warmup": false,
+      "prompt": "A ceramic teapot and two cups on a wooden table beside a window, soft morning light",
+      "seed": 44,
+      "seconds": 2.020204777829349,
+      "denoise_gpu_ms": 1883.237060546875,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 3,
+      "warmup": false,
+      "prompt": "A small red panda drinking tea in a bamboo forest, watercolor painting",
+      "seed": 42,
+      "seconds": 2.025325994938612,
+      "denoise_gpu_ms": 1889.189208984375,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 4,
+      "warmup": false,
+      "prompt": "A small wooden boat on a calm alpine lake at sunrise, realistic landscape photography",
+      "seed": 43,
+      "seconds": 2.0445595141500235,
+      "denoise_gpu_ms": 1911.1478271484375,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 5,
+      "warmup": false,
+      "prompt": "A ceramic teapot and two cups on a wooden table beside a window, soft morning light",
+      "seed": 44,
+      "seconds": 2.0450494301039726,
+      "denoise_gpu_ms": 1911.2025146484375,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 6,
+      "warmup": false,
+      "prompt": "A small red panda drinking tea in a bamboo forest, watercolor painting",
+      "seed": 42,
+      "seconds": 2.0562807079404593,
+      "denoise_gpu_ms": 1922.2232666015625,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 7,
+      "warmup": false,
+      "prompt": "A small wooden boat on a calm alpine lake at sunrise, realistic landscape photography",
+      "seed": 43,
+      "seconds": 2.059119251091033,
+      "denoise_gpu_ms": 1924.0123291015625,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 8,
+      "warmup": false,
+      "prompt": "A ceramic teapot and two cups on a wooden table beside a window, soft morning light",
+      "seed": 44,
+      "seconds": 2.0326972261536866,
+      "denoise_gpu_ms": 1897.0948486328125,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 9,
+      "warmup": false,
+      "prompt": "A small red panda drinking tea in a bamboo forest, watercolor painting",
+      "seed": 42,
+      "seconds": 2.0342683519702405,
+      "denoise_gpu_ms": 1899.362060546875,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 10,
+      "warmup": false,
+      "prompt": "A small wooden boat on a calm alpine lake at sunrise, realistic landscape photography",
+      "seed": 43,
+      "seconds": 2.0486936629749835,
+      "denoise_gpu_ms": 1916.42578125,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    },
+    {
+      "index": 11,
+      "warmup": false,
+      "prompt": "A ceramic teapot and two cups on a wooden table beside a window, soft morning light",
+      "seed": 44,
+      "seconds": 2.0727149229496717,
+      "denoise_gpu_ms": 1938.956787109375,
+      "peak_allocated_bytes": 8557751808,
+      "peak_reserved_bytes": 9261023232,
+      "finite": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+nano-diffusion
+Copyright 2026 Micdiane.
+
+nanodiffusion/models/sana_transformer.py adapts the SANA architecture implementation
+from Hugging Face Diffusers (Apache License 2.0):
+https://github.com/huggingface/diffusers
+src/diffusers/models/transformers/sana_transformer.py
+src/diffusers/models/attention_processor.py
+src/diffusers/models/embeddings.py
+src/diffusers/models/normalization.py
+Copyright 2026 The HuggingFace Team. All rights reserved.
+
+SANA model weights are downloaded separately and retain their upstream license:
+https://huggingface.co/Efficient-Large-Model/Sana_600M_512px_diffusers

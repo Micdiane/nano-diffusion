@@ -1,0 +1,86 @@
+{
+  "repo": "Efficient-Large-Model/Sana_600M_512px_diffusers",
+  "revision": "83d7a190bfd1fd070570a793d2dab5c7a3231b9d",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6609,
+      "sha256": "1e44f21e5820d306aece375d2bb9c5b70b5edb931ed95c91fd5291a9fc9c6f29"
+    },
+    {
+      "path": "model_index.json",
+      "bytes": 401,
+      "sha256": "5692423f50e7908bec51264ad39e5a9b7566970600f6089a0a40759524f5569b"
+    },
+    {
+      "path": "scheduler/scheduler_config.json",
+      "bytes": 840,
+      "sha256": "70e8603120cc387316aa3bc7f08cb2872f6b6eb6eff6f25df1b88b6b76389e81"
+    },
+    {
+      "path": "text_encoder/config.json",
+      "bytes": 875,
+      "sha256": "cc0a98c67ff2b9460920fdd4400b214754b56a83dbe26f2ffe18f5bfe10c563a"
+    },
+    {
+      "path": "text_encoder/model-00001-of-00002.safetensors",
+      "bytes": 4988024144,
+      "sha256": "e909230aabafad02d097c7dc02f2ae062b4e6b0593477c1f07679d277e09ce71"
+    },
+    {
+      "path": "text_encoder/model-00002-of-00002.safetensors",
+      "bytes": 240691624,
+      "sha256": "48e14f6b7a917e54cabc4ff2047ac2bfe0dae663e771eed3a8acf4ea27dcac18"
+    },
+    {
+      "path": "text_encoder/model.safetensors.index.json",
+      "bytes": 22495,
+      "sha256": "92764588f700e36874c52f9f05bba143857e5069fc69b14450f907a1cdf879ed"
+    },
+    {
+      "path": "tokenizer/special_tokens_map.json",
+      "bytes": 636,
+      "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351"
+    },
+    {
+      "path": "tokenizer/tokenizer.json",
+      "bytes": 34362873,
+      "sha256": "5f7eee611703c5ce5d1eee32d9cdcfe465647b8aff0c1dfb3bed7ad7dbb05060"
+    },
+    {
+      "path": "tokenizer/tokenizer.model",
+      "bytes": 4241003,
+      "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2"
+    },
+    {
+      "path": "tokenizer/tokenizer_config.json",
+      "bytes": 46996,
+      "sha256": "cb32b7929c62608d46572e813112b3ad8a841fb98fdd6a4da8559e368a951c89"
+    },
+    {
+      "path": "transformer/config.json",
+      "bytes": 495,
+      "sha256": "44dfc5f16b396035371d4b5a56ef3773a9be9e0c679337b0336b2b81b78be3b8"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model.safetensors",
+      "bytes": 2367054536,
+      "sha256": "d8f492d7a2d6128bcbd8de7a00833a0d6a1fbcf8a8b84e65f3e783e9639a02d7"
+    },
+    {
+      "path": "vae/config.json",
+      "bytes": 1280,
+      "sha256": "4e5669aa03caa77615b73b21c9347c384cb11124a9590683e32a510df0176eb4"
+    },
+    {
+      "path": "vae/diffusion_pytorch_model.safetensors",
+      "bytes": 1249044836,
+      "sha256": "15a4b09e56d95b768a0ec9da50b702e21d920333fc9b3480d66bb5c7fad9d87f"
+    }
+  ]
+}
